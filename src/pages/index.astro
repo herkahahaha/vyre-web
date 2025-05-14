@@ -1,23 +1,428 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-// import Header from '../components/Header.astro';
-// import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Layout from "~/layouts/PageLayout.astro";
+
+import Hero from "~/components/widgets/Hero.astro";
+// import Note from '~/components/widgets/Note.astro';
+import Features from "~/components/widgets/Features.astro";
+// import Features2 from "~/components/widgets/Features2.astro";
+// import Steps from '~/components/widgets/Steps.astro';
+import Content from "~/components/widgets/Content.astro";
+import BlogLatestPosts from "~/components/widgets/BlogLatestPosts.astro";
+// import FAQs from "~/components/widgets/FAQs.astro";
+// import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from "~/components/widgets/CallToAction.astro";
+// import Prices from '~/components/widgets/Pricing.astro';
+
+const metadata = {
+  title: "VYRE — Digital Agency Company",
+  ignoreTitleTemplate: true,
+};
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<!-- <Header /> -->
-		<main>
-			<h1>🧑‍🚀 Belom beres!</h1>
-			<p>Web Enjiner be like..</p>
-			
-			<div style="width:100%;height:0;padding-bottom:56%;position:relative;"><img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXhjdTgzdDM1YmR0dnJuMGc0Ynl1cGhmdzl1czNubHV6dGF2dHF5biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/urECjknRF8Tfi/giphy.gif" width="100%" height="100%" style="position:absolute" ></img></div>
-		</main>
-		<!-- <Footer /> -->
-	</body>
-</html>
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      // {
+      //   variant: 'primary',
+      //   text: 'Get template',
+      //   href: 'https://github.com/onwidget/astrowind',
+      //   target: '_blank',
+      //   icon: 'tabler:download',
+      // },
+      // { text: 'Learn more', href: '#features' },
+    ]}
+    image={{
+      src: "~/assets/images/lucas-unsplash.png",
+      alt: "Vyre Hero Image",
+    }}
+  >
+    <Fragment slot="title">
+      Innovation is messy, on point, and a little bit savage-and so are we
+      <span class="text-accent dark:text-red-700"> VYRE</span> Digital
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      We’re the indie rebels who got tired of the same old “octopus” agencies
+      squeezing every drop of boring out of digital marketing.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <!-- <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" /> -->
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Features"
+    title="What you get with Vyre"
+    subtitle="We turn chaos into breakthrough innovation across every pixel of your brand’s digital presence."
+    items={[
+      {
+        title: "Social Media Management",
+        description: "We do it on point, not on autopilot.",
+        icon: "tabler:brand-tailwind",
+      },
+      {
+        title: "Live Streaming",
+        description: `We make it so real, your audience won’t believe it’s not staged.`,
+        icon: "tabler:inner-shadow-top-right",
+      },
+      {
+        title: "KOL and KOC",
+        description:
+          "We pick the real deal, not just the ones with inflated follower counts.",
+        icon: "tabler:list-check",
+      },
+      {
+        title: "Studio Production",
+        description: "Authentic, edgy, and zero fluff.",
+        icon: "tabler:rocket",
+      },
+      {
+        title: "360 Strategy Campaign",
+        description:
+          "Let’s just say, we don’t follow trends-we set traps for them.",
+        icon: "tabler:meteor",
+      },
+      {
+        title: "Digital Ads Performance",
+        description:
+          "We don’t just throw money at the wall-we make every cent scream ROI.",
+        icon: "tabler:message-circle-dollar",
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="Inside"
+    title="Vyre's Blueprint: Rebel Creativity, Popular Impact"
+    items={[
+      {
+        title: "Creative Independence and Authenticity",
+        description:
+          "As an indie agency, Vyre maintains creative freedom, enabling authentic, rebellious creativity that resonates deeply with target audiences and builds genuine brand loyalty.",
+      },
+      {
+        title: "Agility and Personalized Client Focus",
+        description:
+          "Unlike large agencies, Vyre offers nimble, highly customized solutions, quickly adapting to client needs and market shifts to maximize impact and relevance.",
+      },
+      {
+        title: "Strong Emphasis on Measurable Impact",
+        description:
+          "Vyre commits to delivering measurable results, using industry-leading analytics and attribution tools to prove campaign effectiveness and optimize ROI",
+      },
+    ]}
+    image={{
+      src: "https://images.unsplash.com/photo-1744807044296-84c469a0b3e2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alt: "Colorful Image",
+    }}
+  >
+    <Fragment slot="content">
+      <h3
+        class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2"
+      >
+        Innovation born from disruption, popularity earned through boldness.
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: "High level of customization",
+        description: `Vyre delivers fully customized digital solutions tailored to your brand’s unique identity and goals. We craft personalized strategies and designs that resonate deeply with your target audience, ensuring your message stands out in a crowded digital landscape. Every project is built with precision to reflect your vision and maximize impact.`,
+      },
+      {
+        title: "Fully responsive",
+        description:
+          "Our digital creations are fully responsive, providing flawless user experiences across all devices-smartphones, tablets, and desktops. This adaptability ensures your brand remains accessible and engaging anytime, anywhere, boosting user satisfaction and conversion rates.",
+      },
+      {
+        title: "Integration of media",
+        description:
+          "We expertly combine various media channels-social, video, display, and more-into seamless, integrated campaigns. This holistic approach amplifies your brand’s reach and engagement, creating consistent and compelling storytelling across all platforms to connect with audiences effectively.",
+      },
+    ]}
+    image={{
+      src: "https://images.unsplash.com/photo-1728921976673-a9902271c2c7?q=80&w=1567&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alt: "Blueprint Image",
+    }}
+  >
+    <Fragment slot="content"
+      >Ensure your online presence truly represents you.</Fragment
+    >
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: "Enhanced user engagement",
+        description:
+          "Vyre creates personalized digital experiences that connect deeply with your audience. By leveraging targeted content and interactive channels, we boost engagement, build loyalty, and drive meaningful actions that grow your brand’s presence.",
+      },
+      {
+        title: "Continuous improvement",
+        description:
+          "We continuously monitor and optimize campaigns using data and feedback. This ongoing refinement keeps your marketing strategies fresh, effective, and aligned with the latest trends to maximize results.",
+      },
+      {
+        title: "Time and resource efficiency",
+        description:
+          "Vyre streamlines marketing processes through automation and smart resource management, reducing costs and speeding up delivery so you can focus on scaling your business.",
+      },
+      
+    ]}
+    image={{
+      src: "https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      alt: "Astronauts Image",
+    }}
+  >
+    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Steps Widget ****************** -->
+
+  <!-- <Steps
+    title="Get your dream website up and running in no time with AstroWind."
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Download</span>',
+        description:
+          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Add content</span>',
+        description:
+          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
+        icon: 'tabler:letter-case',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        description:
+          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  /> -->
+
+  <!-- Features2 Widget ************** -->
+
+  <!-- <Features2
+    title="Most used widgets"
+    subtitle="Provides frequently used components for building websites using Tailwind CSS"
+    tagline="Components"
+    items={[
+      {
+        title: "Headers",
+        description:
+          "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        icon: "flat-color-icons:template",
+      },
+      {
+        title: "Heros",
+        description:
+          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+        icon: "flat-color-icons:gallery",
+      },
+      {
+        title: "Features",
+        description:
+          "Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!",
+        icon: "flat-color-icons:approval",
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-transparent dark:bg-transparent"></div>
+    </Fragment>
+  </Features2> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    title="Our Showcase Coming soon"
+    subtitle="We are working on the content of these pages. You will see them very soon. Stay tuned Stay tuned!"
+    actions={[
+      {
+        variant: "secondary",
+        text: "Inquiries",
+        href: "mailto:info@vyreagency.id",
+        icon: "tabler:mail",
+      },
+    ]}
+  />
+
+  <!-- <Prices
+    title="Our Package prices"
+    subtitle="Only pay for what you need"
+    prices={[
+      {
+        title: 'basic',
+        subtitle: 'Optimal choice for personal use',
+        price: 29,
+        period: 'per month',
+        items: [
+          {
+            description: 'Etiam in libero, et volutpat',
+          },
+          {
+            description: 'Aenean ac nunc dolor tristique',
+          },
+          {
+            description: 'Cras scelerisque accumsan lib',
+          },
+          {
+            description: 'In hac habitasse',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+      },
+      {
+        title: 'standard',
+        subtitle: 'Optimal choice for small teams',
+        price: 69,
+        period: 'Per Month',
+        items: [
+          {
+            description: 'Proin vel laoreet',
+          },
+          {
+            description: 'Ut efficitur habitasse egestas',
+          },
+          {
+            description: 'Volutpat hac curabitur',
+          },
+          {
+            description: 'Pellentesque blandit ut nibh',
+          },
+          {
+            description: 'Donec fringilla sem',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'premium',
+        subtitle: 'Optimal choice for companies',
+        price: 199,
+        period: 'Per Month',
+        items: [
+          {
+            description: 'Curabitur suscipit risus',
+          },
+          {
+            description: 'Aliquam habitasse malesuada',
+          },
+          {
+            description: 'Suspendisse sit amet blandit',
+          },
+          {
+            description: 'Suspendisse auctor blandit dui',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Get started',
+          href: '#',
+        },
+      },
+    ]}
+  /> -->
+
+  <!-- HighlightedPosts Widget ******* -->
+
+  <BlogLatestPosts
+    title="Find out more content in our Blog"
+    information={`The blog is used to display Vyre documentation.
+                        Each new article will be an important step that you will need to know to be an expert in creating a digital presence partnering with us. Thanks.
+                `}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Dive into the following questions to gain insights into the powerful features that Vyre offers and how it can elevate your digital marketing journey."
+    tagline="FAQs"
+    classes={{ container: "max-w-6xl" }}
+    items={[
+      {
+        title: "Why AstroWind?",
+        description:
+          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+      },
+      {
+        title: "What do I need to start?",
+        description:
+          "Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.",
+      },
+      {
+        title: "How to install the Astro + Tailwind CSS template?",
+        description:
+          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+      },
+      {
+        title: "What's something that you don't understand?",
+        description:
+          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+      },
+    ]}
+  /> -->
+
+  <!-- Stats Widget ****************** -->
+  <!-- 
+  <Stats
+    stats={[
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Stars', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
+      { title: 'Users', amount: '48.4K' },
+    ]}
+  /> -->
+</Layout>

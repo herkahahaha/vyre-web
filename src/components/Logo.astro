@@ -1,0 +1,22 @@
+---
+import { SITE } from "astrowind:config";
+import Image from "~/components/common/Image.astro";
+---
+
+<div class="flex items-center gap-2">
+  <Image
+    class="mx-auto rounded-md w-full"
+    widths={[400, 768, 1024, 2040]}
+    sizes="(max-width: 767px) 150px"
+    loading="eager"
+    width={86}
+    height={63}
+    src={"~/assets/images/VYRE-logo.png"}
+    alt={"Vyre Red Logo"}
+  />
+  <span
+    class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+  >
+    {SITE?.name}
+  </span>
+</div>
