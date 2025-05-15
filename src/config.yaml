@@ -67,7 +67,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: G-E94X603HBQ # or "G-XXXXXXXXXX"
+      id: "G-E94X603HBQ" # or "G-XXXXXXXXXX"
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
