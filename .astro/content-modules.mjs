@@ -1,9 +1,10 @@
 
 export default new Map([
 ["src/data/post/build-and-own-your-traffic.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fdata%2Fpost%2Fbuild-and-own-your-traffic.mdx&astroContentModuleFlag=true")],
-["src/data/post/benefits-of-developing-a-custom-website.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fdata%2Fpost%2Fbenefits-of-developing-a-custom-website.mdx&astroContentModuleFlag=true")],
+["src/data/post/kill-zone-brand-legacy-genz-supply-chain.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fdata%2Fpost%2Fkill-zone-brand-legacy-genz-supply-chain.mdx&astroContentModuleFlag=true")],
 ["src/data/post/importance-of-digital-presence-for-business.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fdata%2Fpost%2Fimportance-of-digital-presence-for-business.mdx&astroContentModuleFlag=true")],
 ["src/data/post/indonesia-influencers-key-content-trends-and-focus-areas-for-2025.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fdata%2Fpost%2Findonesia-influencers-key-content-trends-and-focus-areas-for-2025.mdx&astroContentModuleFlag=true")],
 ["src/data/post/seo-and-sem-key-differences-best-practices-for-digital-success.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fdata%2Fpost%2Fseo-and-sem-key-differences-best-practices-for-digital-success.mdx&astroContentModuleFlag=true")],
-["src/data/post/online-to-offline-marketing.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fdata%2Fpost%2Fonline-to-offline-marketing.mdx&astroContentModuleFlag=true")]]);
+["src/data/post/online-to-offline-marketing.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fdata%2Fpost%2Fonline-to-offline-marketing.mdx&astroContentModuleFlag=true")],
+["src/data/post/benefits-of-developing-a-custom-website.mdx", () => import("astro:content-layer-deferred-module?astro%3Acontent-layer-deferred-module=&fileName=src%2Fdata%2Fpost%2Fbenefits-of-developing-a-custom-website.mdx&astroContentModuleFlag=true")]]);
 		
