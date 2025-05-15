@@ -68,6 +68,7 @@ analytics:
   vendors:
     googleAnalytics:
       id: "G-E94X603HBQ" # or "G-XXXXXXXXXX"
+      partytown: "GTM-TZ3295NL"
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
