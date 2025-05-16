@@ -2,7 +2,7 @@
 import Layout from "~/layouts/PageLayout.astro";
 
 import Hero from "~/components/widgets/Hero.astro";
-// import Note from '~/components/widgets/Note.astro';
+import Note from '~/components/widgets/Note.astro';
 import Features from "~/components/widgets/Features.astro";
 // import Features2 from "~/components/widgets/Features2.astro";
 // import Steps from '~/components/widgets/Steps.astro';
@@ -51,7 +51,7 @@ const metadata = {
 
   <!-- Note Widget ******************* -->
 
-  <!-- <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" /> -->
+  <Note title="Philosophy:" description="We’re not for every brand. We work with the restless, the disruptors, the ones who refuse to rot in the comfort zone." />
 
   <!-- Features Widget *************** -->
 
@@ -60,11 +60,12 @@ const metadata = {
     tagline="Features"
     title="What you get with Vyre"
     subtitle="We turn chaos into breakthrough innovation across every pixel of your brand’s digital presence."
+    columns={3}
     items={[
       {
         title: "Social Media Management",
         description: "We do it on point, not on autopilot.",
-        icon: "tabler:brand-tailwind",
+        icon: "tabler:cell",
       },
       {
         title: "Live Streaming",
@@ -75,7 +76,7 @@ const metadata = {
         title: "KOL and KOC",
         description:
           "We pick the real deal, not just the ones with inflated follower counts.",
-        icon: "tabler:list-check",
+        icon: "tabler:brand-tiktok",
       },
       {
         title: "Studio Production",
@@ -276,12 +277,12 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Our Showcase Coming soon"
+    title="If you’re looking for flashy portfolios, we’re not it. We build traction not slideshows."
     subtitle="We are working on the content of these pages. You will see them very soon. Stay tuned Stay tuned!"
     actions={[
       {
         variant: "secondary",
-        text: "Inquiries",
+        text: "Ready to stop being boring? Hit us up.",
         href: "mailto:info@vyreagency.id",
         icon: "tabler:mail",
       },
@@ -378,9 +379,8 @@ const metadata = {
   <!-- HighlightedPosts Widget ******* -->
 
   <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display Vyre documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a digital presence partnering with us. Thanks.
+    title="Another Blog? Yes. But This One Doesn’t Waste Your Time."
+    information={`This isn’t just a blog. It’s where we document how we break the rules, fix what’s broken, and build digital presence that actually makes sense. Read it if you’re tired of the usual fluff.
                 `}
   />
 

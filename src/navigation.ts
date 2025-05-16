@@ -121,7 +121,7 @@ export const headerData = {
     //   href: '#',
     // },
   ],
-  actions: [{ text: 'Contact Us', href: ` https://wa.me/6285133313636?text=I'm%20inquiring%20about%20the%20vyre%20digital%20services`, target: '_blank' }],
+  actions: [{ text: 'Think you’re a fit? Prove it.', href: ` https://wa.me/6285133313636?`, target: '_blank' }],
 };
 
 export const footerData = {
